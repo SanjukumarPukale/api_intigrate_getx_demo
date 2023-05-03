@@ -37,7 +37,7 @@ class _HomeViewState extends State<HomeView> {
           case Status.LOADING: 
             return Center(child: CircularProgressIndicator(),);
           case Status.ERROR: 
-          if(homeController.error.value == 'No internet: ') {
+          if(homeController.error.value == AppException.noInternetError) {           //  'No internet: '
             return InternetExceptionWidget(onPress: () {
               homeController.userListApi();
             },);

@@ -3,10 +3,14 @@ final _message;
 final _prefix;
 
   AppException([this._message, this._prefix]);
+
+  static String noInternetError = '';
   
   @override
   String toString() {
-    return '$_prefix: $_message';
+   String error = '$_prefix: $_message';
+   noInternetError = _prefix == 'No internet' ? error : ''; 
+    return error;
   }
 
 }
@@ -32,6 +36,6 @@ class InvalidUrlException extends AppException {
 }
 
 class FetchDataException extends AppException {
-  FetchDataException([String? message]) : super(message, '');
+  FetchDataException([String? message]) : super(message, 'FetchDataException');
 
 }
