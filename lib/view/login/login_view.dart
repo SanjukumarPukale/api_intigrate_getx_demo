@@ -1,5 +1,6 @@
 import 'package:api_intigrate_getx_demo/res/routes/app_exports.dart';
 
+
 class LoginView extends StatefulWidget {
   const LoginView({ Key? key }) : super(key: key);
 
@@ -27,6 +28,8 @@ class _LoginViewState extends State<LoginView> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+             InputAssociationId(),
+             SizedBox(height: 40,),
              InputEmailWidget(),
               SizedBox(height: 40,),
               InputPasswordWidget(),

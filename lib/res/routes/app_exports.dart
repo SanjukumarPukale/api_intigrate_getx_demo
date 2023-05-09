@@ -32,6 +32,8 @@ export 'package:api_intigrate_getx_demo/repository/home_repository/home_reposito
 export 'package:api_intigrate_getx_demo/models/login/user_model.dart';
 export 'package:api_intigrate_getx_demo/repository/login_repository/login_repository.dart';
 export 'package:shared_preferences/shared_preferences.dart';
+export 'package:crypto/crypto.dart';
+export 'package:api_intigrate_getx_demo/view/login/widgets/input_assosiation_id.dart';
 
 
 

@@ -8,8 +8,8 @@ class SplashServices {
  
   Timer(const Duration(seconds: 3), () {
      userPreferences.getUser().then((value) {
-    print(value.token);
-    if(value.token.toString() == 'null') {
+    print(value.accessToken);
+    if(value.accessToken.toString() == 'null') {
       Get.offAllNamed(RouteName.loginView);
     } else {
       Get.offAllNamed(RouteName.homeView);

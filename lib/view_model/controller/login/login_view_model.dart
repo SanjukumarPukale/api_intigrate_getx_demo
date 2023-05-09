@@ -7,9 +7,12 @@ class LoginViewModel extends GetxController {
   
   final emailController = TextEditingController().obs;
   final passwordController = TextEditingController().obs;
+  final associationIdController = TextEditingController().obs;
 
   final emailFocusNode = FocusNode().obs;
   final passwordFocusNode = FocusNode().obs;
+  final associationIdFocusNode = FocusNode().obs;
+
 
   RxBool loading = false.obs;
 
@@ -17,7 +20,8 @@ class LoginViewModel extends GetxController {
     loading.value = true;
     Map data = {
       'email': emailController.value.text,
-      'password': passwordController.value.text
+      'password': passwordController.value.text,
+      'associationId': associationIdController.value.text
     };
     _api.loginApi(data).then((value) {
       loading.value = false;
